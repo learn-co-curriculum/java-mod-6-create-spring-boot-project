@@ -2,14 +2,15 @@
 
 ## Learning Goals
 
-- Create a Spring Boot project with dependencies.
+- Create a Spring Boot project using the Spring Initializr.
+- Explain the Spring Boot directory structure.
 
 ## Introduction
 
 Spring Boot makes it easy to create a project with the required dependencies. We
 can use the [Spring Initializr](https://start.spring.io/) tool to generate a
 SpringBoot project. We will generate a project in this section and then walk
-through some of the main configurations in the project.
+through some main configurations in the project.
 
 ## Generate a Project on Spring Initializr
 
@@ -21,26 +22,50 @@ Here are the steps for creating and opening a project:
 
 1. Go to [https://start.spring.io/](https://start.spring.io/).
 2. Select the project properties.
+   1. Select "Maven Project", as we will use Maven as the build tool.
+   2. Select "Java" as the language.
+   3. Select the most recent release version of Spring Boot. (Make sure it does
+      not have "SNAPSHOT" listed after it.)
+   4. Select the appropriate Java JDK version.
 3. Add dependencies.
+   1. Let's add the Spring Data JPA dependency to show how to add dependencies.
+   2. Click "ADD DEPENDENCIES".
+   3. Search for "spring data jpa".
+   4. Select "Spring Data JPA" from the list.
 4. Click on the “Generate” button on the bottom. This will download a zip file
    containing the SpringBoot project.
-5. Unzip the archive and open it in your preferred code editor or IDE.
+5. Unzip the archive and open it in a preferred code editor or IDE.
 
-![Spring Initializr home screen](https://curriculum-content.s3.amazonaws.com/java-spring-1/spring-initalizr.png)
+![Spring Initializr home screen](https://curriculum-content.s3.amazonaws.com/spring-mod-1/create-spring-boot-project/spring-initializr.png)
 
 ## Explore Spring Boot Project
 
-We will discuss the following parts of the SpringBoot projects:
+When we open up the Spring Boot project, we'll notice the directory structure
+looks like this:
 
-1. The default class.
-2. POM Parent
-3. Dependencies
-4. Maven Plugin
-5. Properties file
+```text
+└── /demo
+		├── src
+		│   ├── main
+		│   │   ├── java
+		│   │   ├──── org.example.demo
+		│   │   ├────── DemoApplication.java 
+		│   │   ├── resources
+		│   │   └──── application.properties
+		│   └── test
+		│       ├── java
+		│       └── resources
+		└── pom.xml
+```
+
+Notice how this looks very similar to a typical Maven project structure. Let's
+delve into some of this a little deeper. We'll take a second look at the default
+class that Spring Boot has created for us, the pom.xml file, and the
+application.properties file.
 
 ### The Default Class
 
-A SpringBoot project has a single `.java` file that is the entry to the
+A Spring Boot project has a single `.java` file that is the entry to the
 application. In our case, we will have a `DemoApplication` class. This is what
 our `DemoApplication` class looks like:
 
@@ -72,7 +97,7 @@ The `pom.xml` file has a `<parent>` section that looks like this:
 <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.7.2</version>
+	<version>2.7.5</version>
 	<relativePath/> <!-- lookup parent from repository -->
 </parent>
 ```
@@ -107,9 +132,10 @@ like:
 
 ### Maven Plugin
 
-The Maven plugin helps set up some of the default configuration for the project.
-It allows us to package executable jar or war archives, run Spring Boot
-applications, generate build information. You can read more about the plugin
+The Maven plugin helps set up some default configuration for the project. This
+plugin allows us to package executable jar or war archives, run Spring Boot
+applications, and generate build information. To learn more about the Maven
+plugin, please see the documentation
 [here](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/).
 
 ```xml
@@ -125,12 +151,13 @@ applications, generate build information. You can read more about the plugin
 
 ### Properties File
 
-There is an `application.properties` file in the `resources` directory. This is
-where we add configurations for dependencies or for overriding default Spring
-Boot configurations.
+There is an application.properties file in the `resources` directory. This is
+where we can add configurations for dependencies or for overriding default
+Spring Boot configurations. We'll learn more about the application.properties
+file in a later lesson.
 
 ## Conclusion
 
-We have learned how to set up a Spring Boot projects. In the next lessons, we
+We have learned how to set up a Spring Boot project. In the next lessons, we
 will create Spring Boot projects with different dependencies but the initial
 process of generating a project will be very similar.
