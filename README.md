@@ -9,7 +9,7 @@
 
 Spring Boot makes it easy to create a project with the required dependencies. We
 can use the [Spring Initializr](https://start.spring.io/) tool to generate a
-SpringBoot project. We will generate a project in this section and then walk
+Spring Boot project. We will generate a project in this section and then walk
 through some main configurations in the project.
 
 ## Generate a Project on Spring Initializr
@@ -45,23 +45,23 @@ looks like this:
 
 ```text
 └── /demo
-		├── src
-		│   ├── main
-		│   │   ├── java
-		│   │   ├──── org.example.demo
-		│   │   ├────── DemoApplication.java 
-		│   │   ├── resources
-		│   │   └──── application.properties
-		│   └── test
-		│       ├── java
-		│       └── resources
-		└── pom.xml
+ ├── src
+ │   ├── main
+ │   │   ├── java
+ │   │   ├──── org.example.demo
+ │   │   ├────── DemoApplication.java 
+ │   │   ├── resources
+ │   │   └──── application.properties
+ │   └── test
+ │       ├── java
+ │       └── resources
+ └── pom.xml
 ```
 
 Notice how this looks very similar to a typical Maven project structure. Let's
-delve into some of this a little deeper. We'll take a second look at the default
-class that Spring Boot has created for us, the pom.xml file, and the
-application.properties file.
+delve into some of this a little deeper. We'll take a peek at the default class
+that Spring Boot has created for us, a second look at the pom.xml file, and then
+glance at the application.properties file.
 
 ### The Default Class
 
@@ -78,9 +78,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+ public static void main(String[] args) {
+  SpringApplication.run(DemoApplication.class, args);
+ }
 
 }
 ```
@@ -95,10 +95,10 @@ The `pom.xml` file has a `<parent>` section that looks like this:
 
 ```xml
 <parent>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.7.5</version>
-	<relativePath/> <!-- lookup parent from repository -->
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-parent</artifactId>
+ <version>2.7.5</version>
+ <relativePath/> <!-- lookup parent from repository -->
 </parent>
 ```
 
@@ -116,18 +116,18 @@ work with JPA and an external data source. This is what the `dependencies` looks
 like:
 
 ```xml
-<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 ```
 
 ### Maven Plugin
@@ -139,14 +139,14 @@ plugin, please see the documentation
 [here](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/).
 
 ```xml
-<build>
-	<plugins>
-		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-		</plugin>
-	</plugins>
-</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 ```
 
 ### Properties File
