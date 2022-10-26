@@ -77,10 +77,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
-
- public static void main(String[] args) {
-  SpringApplication.run(DemoApplication.class, args);
- }
+    
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
 }
 ```
@@ -95,10 +95,10 @@ The `pom.xml` file has a `<parent>` section that looks like this:
 
 ```xml
 <parent>
- <groupId>org.springframework.boot</groupId>
- <artifactId>spring-boot-starter-parent</artifactId>
- <version>2.7.5</version>
- <relativePath/> <!-- lookup parent from repository -->
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-parent</artifactId>
+   <version>2.7.5</version>
+   <relativePath/> <!-- lookup parent from repository -->
 </parent>
 ```
 
