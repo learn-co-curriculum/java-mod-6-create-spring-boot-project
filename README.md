@@ -156,6 +156,21 @@ where we can add configurations for dependencies or for overriding default
 Spring Boot configurations. We'll learn more about the application.properties
 file in a later lesson.
 
+## Running the Spring Boot Application
+
+If we were to run our Spring Boot application, we'd go back to the default class
+and click on the green play button next to the `main` method:
+
+![Run Demo Application](https://curriculum-content.s3.amazonaws.com/spring-mod-1/create-spring-boot-project/run-spring-boot-application.png)
+
+Since the Spring Initializr only provided us with a base template to creating a
+Spring Boot project, when we run the application, it will immediately start and
+then finish executing.
+
+In the rest of this module, we will expand upon our Spring Boot application to
+be a little more useful.
+123456789101112131415161718192021222324252627ac28293031323334353637383940404143454
+
 ## Conclusion
 
 We have learned how to set up a Spring Boot project. In the next lessons, we
