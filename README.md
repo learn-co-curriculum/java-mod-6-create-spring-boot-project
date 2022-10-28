@@ -24,7 +24,7 @@ Here are the steps for creating and opening a project:
 2. Select the project properties.
    1. Select "Maven Project", as we will use Maven as the build tool.
    2. Select "Java" as the language.
-   3. Select the most recent release version of Spring Boot. (Make sure it does
+   3. Select the most recent release version of Spring Boot 2. (Make sure it does
       not have "SNAPSHOT" listed after it.)
    4. Select the appropriate Java JDK version.
 3. Add dependencies.
@@ -33,7 +33,7 @@ Here are the steps for creating and opening a project:
    3. Search for "spring data jpa".
    4. Select "Spring Data JPA" from the list.
 4. Click on the “Generate” button on the bottom. This will download a zip file
-   containing the SpringBoot project.
+   containing the Spring Boot project.
 5. Unzip the archive and open it in a preferred code editor or IDE.
 
 ![Spring Initializr home screen](https://curriculum-content.s3.amazonaws.com/spring-mod-1/create-spring-boot-project/spring-initializr.png)
