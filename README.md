@@ -169,10 +169,14 @@ then finish executing.
 
 In the rest of this module, we will expand upon our Spring Boot application to
 be a little more useful.
-123456789101112131415161718192021222324252627ac28293031323334353637383940404143454
 
 ## Conclusion
 
 We have learned how to set up a Spring Boot project. In the next lessons, we
 will create Spring Boot projects with different dependencies but the initial
 process of generating a project will be very similar.
+
+## References
+
+- [Spring Initializr](https://start.spring.io/)
+- [Spring Boot Maven Plugin Documentation](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/)
